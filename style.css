@@ -1,24 +1,35 @@
+:root {
+  --color-background: #c4c4c4;
+  --color-texto: #000000;
+  --offset: 5px;
+  --outline: 2px solid var(--color-background);
+  --margin-background: 5% 10%;
+  --padding-background: 80px 0 0 0;
+  --padding-in-box: 2%;
+}
+
 body {
   box-sizing: border-box;
   background-image: url(assets/bg.png);
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
-  font-family: "noka", sans-serif;
+  font-family: "kallisto", sans-serif;
   font-weight: 300;
   font-style: normal;
   margin: 0;
   padding: 0;
   line-height: 1;
 }
+
 ol,
 ul,
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
-  color: var(--cor-de-link);
+  color: var(--color-texto);
 }
 
 /*Sección Menu*/
@@ -33,6 +44,9 @@ section.menu {
   display: flex;
   justify-content: center;
   white-space: nowrap;
+  background-color: #000000c9;
+  font-family: "lunatix", sans-serif;
+  font-weight: bold;
 }
 
 .menu__header {
@@ -47,117 +61,142 @@ section.menu {
   display: flex;
   justify-content: space-between;
   transform: skew(-25deg);
-  outline-offset: 5px;
-  outline: 2px solid #ffffff;
   padding: 0;
+  outline-offset: var(--offset);
+  outline: var(--outline);
 }
 
 .menu__list__item {
-  font-size: 1.2em;
-  padding: 10px 20px;
+  font-size: 1.3em;
+  transition: all 0.1s linear;
+  background-color: var(--color-background);
   margin: 0 3px;
-  transition: all 0.5s ease;
-  background-color: white;
-  border: 2px solid white;
+  border: 2px solid rgba(0, 0, 0, 0);
 }
 
 .menu__list__item a {
   display: block;
+  padding: 8px 17px;
   transform: skew(25deg);
+  transition: all 0.1s linear;
 }
 
 .menu__list__item:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--color-background);
+}
+
+.menu__list__item:hover a {
   color: white;
 }
 
 /*Sección Title*/
 
 section.title {
-  width: auto;
-  height: auto;
-  margin: 100px 30px 0 30px;
+  margin: var(--margin-background);
+  padding: var(--padding-background);
 }
 
 .title__div {
   display: flex;
   align-items: center;
   gap: 50px;
-  background-color: #000000c9;
-  border-radius: 20px;
-  box-shadow: -4px 4px #2c2c2ca1;
-  padding: 30px 50px 30px 50px;
+  background-color: var(--color-background);
+  outline-offset: var(--offset);
+  outline: var(--outline);
+  padding: var(--padding-in-box);
 }
 
 .title__profile {
   width: 30%;
-  border-radius: 80px;
-  border: 2px solid #ffffff86;
+  margin: 10px 10px 10px 20px;
+  outline: 2px solid black;
+  outline-offset: 2px;
 }
 
 .title__container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
 }
 
-/* Seccion Sidebar */
 .redes {
-  display: flex;
-  border-radius: 20px 0 0 20px;
   height: 235px;
-  align-items: center;
+  margin: 0 20px 0 0;
 }
 
 .title__network {
   display: flex;
   flex-direction: column;
-  padding: 10px 10px 5px 10px;
-  gap: 20px;
+  gap: 10px;
+  padding: 0;
+}
+
+.title__network__item {
+  transition: all 0.2s linear;
+  padding: 2px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.title__network__item:hover {
+  border: 2px solid black;
+  outline: var(--outline);
+  outline-offset: var(--offset);
 }
 
 /*Sección About*/
 
 section.about {
-  display: flex;
-  margin: 70px 30px 70px 30px;
+  margin: var(--margin-background);
+  padding: var(--padding-background);
 }
 
 .about__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 50px 30px 50px;
-  background-color: #000000c9;
-  border-radius: 20px;
-  box-shadow: -4px 4px #2c2c2ca1;
+  text-align: center;
+  background-color: var(--color-background);
+  outline: var(--outline);
+  outline-offset: var(--offset);
+  padding: var(--padding-in-box);
 }
 
 .about__title {
-  justify-content: center;
-  margin: 0 0 30px 0;
+  margin: 0;
   font-size: 2em;
 }
 
 .about__paragraph {
-  margin: 0 0 30px 0;
+  display: flex;
+  padding: 20px 0 0 10px;
+  margin: 0;
 }
 
 /* Sección Skills */
 section.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: var(--margin-background);
+  padding: var(--padding-background);
+}
+
+.skills-container {
+  text-align: center;
+  background-color: var(--color-background);
+  outline: var(--outline);
+  outline-offset: var(--offset);
+  padding: var(--padding-in-box);
+}
+
+.skills__title {
+  font-size: 2em;
+  margin: 0;
 }
 
 .skills__line {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  padding: 30px 0 0 0;
+  margin: 0;
 }
 
 .skills__box {
-  margin: 0 30px 0 0;
+  margin: 15px 30px 15px 30px;
 }
 
 .skills__img {
@@ -170,7 +209,7 @@ section.skills {
 .skills__box ul {
   margin: 0;
   padding: 0;
-  height: 60px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -178,15 +217,26 @@ section.skills {
 
 .skills__img img {
   vertical-align: middle;
+  width: 100px;
+  height: 100px;
+}
+
+.skills__name {
+  font-weight: bold;
 }
 
 /*Sección Hobbies*/
 
 section.hobbies {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+  margin: var(--margin-background);
+}
+
+.hobbies__container {
+  text-align: center;
+  background-color: var(--color-background);
+  outline: var(--outline);
+  outline-offset: var(--offset);
+  padding: var(--padding-in-box);
 }
 
 .hobbies__line {
