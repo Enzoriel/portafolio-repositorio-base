@@ -47,6 +47,7 @@ section.menu {
   background-color: #000000c9;
   font-family: "lunatix", sans-serif;
   font-weight: bold;
+  z-index: 1;
 }
 
 .menu__header {
@@ -246,30 +247,103 @@ section.hobbies {
   flex-direction: row;
 }
 
-/* Experiencia Académica*/
+/* Proyects*/
 
-section.academic {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+section.proyects {
+  margin: var(--margin-background);
+  padding: var(--padding-background);
 }
 
-.academic__courses {
+.proyects__container {
+  background-color: var(--color-background);
+  outline: var(--outline);
+  outline-offset: var(--offset);
+  padding: var(--padding-in-box);
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-/* experiencia*/
+.experience__section__title {
+  text-align: center;
+  margin: 10px 0 30px 0;
+}
 
-section.experience {
+.experience__container {
+  display: flex;
+  height: 400px;
+}
+
+.experience__info {
+  position: relative;
+  display: flex;
+  flex: 1;
+  transition: flex 0.5s ease-in-out;
+}
+
+.experience__img {
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
+}
+
+.experience__description {
+  display: flex;
+  position: absolute;
+  white-space: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  filter: opacity(0);
+  transition: all 0.5s ease;
+}
+
+.experience__info:hover {
+  flex: 5;
+}
+
+.experience__info:hover .experience__description {
+  filter: opacity(100%);
+}
+
+.experience__button {
+  font-family: "kallisto", sans-serif;
+  font-style: bold;
+  letter-spacing: 0.05rem;
+  overflow: hidden;
+  width: 120px;
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  background-color: #000000f9;
+  border: 0;
+  outline-offset: 3px;
+  outline: 2px solid #000000f9;
+  transition: all 0.2s ease-in-out;
+}
+
+.experience__button:hover {
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  outline-offset: 0;
 }
 
 /*Contacto*/
 
 section.formcontato {
+  margin: var(--margin-background);
+  padding: var(--padding-background);
+}
+
+.contacto__container {
+  background-color: var(--color-background);
+  outline: var(--outline);
+  outline-offset: var(--offset);
+  padding: var(--padding-in-box);
 }
 
 /*footeer*/
