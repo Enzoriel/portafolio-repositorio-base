@@ -463,7 +463,10 @@ section.formcontato {
 
 /*footeer*/
 
-section.footer {
+.footer {
+  color: white;
+  text-align: center;
+  font-family: var(--font-secundaria);
 }
 
 /*Mobile*/
@@ -500,12 +503,6 @@ section.footer {
     flex-direction: row;
   }
 
-  /*Sección sobre mi*/
-
-  /*Skills*/
-
-  /*Hobbies*/
-
   .hobbies__img {
     width: 80%;
     height: 50%;
@@ -514,11 +511,4 @@ section.footer {
   .hobbies__name {
     font-size: 1.6vw;
   }
-  /*Formación Académica*/
-
-  /*Experiencia Profesional*/
-
-  /*Contacto*/
-
-  /*Footer*/
 }
