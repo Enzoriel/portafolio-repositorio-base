@@ -191,6 +191,7 @@ section.skills {
 
 .skills__line {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 30px 0 0 0;
   margin: 0;
@@ -344,6 +345,16 @@ section.formcontato {
   outline: var(--outline);
   outline-offset: var(--offset);
   padding: var(--padding-in-box);
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formcontato__input {
+  padding: 5px;
 }
 
 /*footeer*/
